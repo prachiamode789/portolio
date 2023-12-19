@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="image/favicon (4).ico">
+    <title>Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="progres/jquery.lineProgressbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="https://kit.fontawesome.com/22a4f6b8a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link id="scrollUpTheme" rel="stylesheet" href="scrollup/themes/tab.css">
+    <link rel="stylesheet" href="scrollup/labs.css">
+    <script src="scrollup/jquery.scrollUp.min.js"></script>
+    <script src="scrollup/jquery-1.11.1.min.js"></script> -->
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .hero-sec{
+            height: 100vh;
+        } 
+        .main{
+            overflow: hidden;
+            background: #212428;
+            height: 100vh;  
+        }
+        .main:hover{
+            overflow-y: auto;
+        }
+        .img1{
+            width: 150px;
+            height: 150px;
+        }
+        nav{
+            margin: auto;
+        }
+        .nevg{
+            position: relative;
+        }
+        .nevg li a{
+         font-size: 20px;
+         text-decoration: none;
+         color: #FDFEFE87;
+         margin-bottom: 10%;
+         padding-top: 10px;
+         margin-left: 30px;
+        }
+        .nevg li a:hover{
+            color:#ff014f;
+        }
+        .nevg li img:hover{
+           color: #ff014f;
+        }
+        .nevg li{
+            padding-top: 12%;
+        }
+        .div1{
+            width: 200px;
+            background-color: #16161687;
+            margin: auto;
+        }
+        .div1:hover{
+            -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+        }
+        .span1{
+          float: right;
+        }
+      .line{
+        width: 80%;
+        color: white;
+      }
+      .span2{
+        font-weight: 600;
+        color: #FDFEFE87;
+      }
+      .icon{
+       margin-bottom: 50px;
+       display: flex;
+    }
+     .icon1:hover{
+        -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+    }
+    .icon1{
+        padding: 12px;
+        background-color: #16161687;
+    }
+    span{
+        font-size: 18px;
+    }
+    .parti{
+        border-bottom: 2px solid black;
+        height: 650px;
+    }
+    .sec1{
+        width: 290px;
+        height: 290px;
+        border-radius: 50%;
+        /* background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); */
+        /* background-color: #ff014f; */
+        /* background-image: linear-gradient(to right,	#ff014f,	#dd3b6cdd ,#993a99  ,#5965ce,#3d73d6 ,#147ec5,#125BCC  ); */
+        /* border: 5px solid #125BCC; */
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes example {
+  0% {background-color: #ff014f}
+  15% {background-color: #f79533}
+  25% {background-color: #f37055;}
+  40% {background-color: #ef4e7b;}
+  50% {background-color:  #a166ab;}
+  70% {background-color: #5073b8;}
+  85% {background-color: #1098ad;}
+  90% {background-color:#07b39b;}
+  100%{background-color: #6fba82;}                  
+}
+    .h1{
+        color: #6c757d;
+        font-weight: 700;
+    }
+    #typ{
+        margin-left: 20px;
+        color: #ff014f;
+        text-align: center; 
+        font-size: 35px;
+    }
+    b{  
+        color: #6c757d;
+        font-size: 35px;
+    }
+    .mybtn{
+        padding: 50px;
+    }
+    .btn1{
+        background-color:#16161687;
+        padding: 16px 30px;
+        border: none;
+        font-size:18px;
+        color: #ff014f;
+        opacity: 0.9;
+    }
+    .btn1:hover{
+        color: #ff014f;
+    }
+    .main1{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .main1:hover{
+        overflow-y: scroll;
+    }
+    .sec2{
+        padding-top: 30px;
+        text-align: center;
+        color: white;
+    }
+    .sec2 .span3{
+        color: #ff014f;
+        padding-top: 20px;
+    }
+     .h2{
+         color: #6c757d;
+         font-weight: 700;
+         font-size: 60px;
+    }
+    .head02{
+        text-align: center;
+        color:#6c757d;
+         font-weight: 700;
+         font-size: 60px;
+    }
+    .sub-sec{
+        display: flex;
+    }
+    .sub-sec1{
+        color:rgb(196, 207, 222);
+        background: linear-gradient(to right bottom, #212428, #16181c);
+        margin: 10px;
+        padding: 30px 40px;
+    }
+    .sub-sec1:hover{
+        background: linear-gradient(to right bottom, #1c1c1d, #16181c);
+        color: white;
+    }
+    .sec2-head{
+        font-size: 30px;
+        font-weight: 600;
+    }
+     .pe{
+        margin-top: 8px;
+        font-size: 17px;
+        width: 300px;
+    }
+    .sub-sec1 p:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+    }
+    .icon-menu{
+        box-shadow:  2px 2px 8px 8px  #121416;
+        margin: auto;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        background-color: #212428;
+    }
+    .icon-menu:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+    }
+    .i{  
+        font-size: 40px;
+        padding: 10px;
+        text-align: center;
+        color: #ff014f;
+    }
+    .sec3{
+        margin-top: 100px;
+        text-align: center;
+        color: whitesmoke;
+    }
+    .sec3 span{
+        color: #ff014f;
+    }
+    .sec3 h2{
+         color: #6c757d;
+         font-weight: 700;
+         font-size: 60px;
+    }
+    figure{
+        border-radius: 10px;
+        padding: 30px 10px;
+        background: linear-gradient(to right bottom, #212428,#16181c); 
+        opacity: 0.9;
+       }
+       figure:hover{
+        background: black;
+       }
+       figure img{
+        transition: transform .2s
+       }
+       figure img:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+  opacity: 0.8;
+       }
+       figcaption{
+        padding-top: 10px;
+       }
+       .btn2{
+            margin: 10px;
+            background-color: #16181c;
+            padding: 20px 50px;
+            font-size: 20px;
+            border: none;
+            color: #7e8fa6;
+            width: 45%;
+            font-weight: 600;
+            box-shadow: 10px 5px 15px #16181c;
+       }
+       .btn2:hover{
+            background-color:#16181c;
+            color: #ff014f;
+       }
+       .heading4{
+            font-size: 40px;
+            font-weight: 700;
+            color: #7e8fa6;
+       }
+       .p1{
+         width: 400px;
+       }
+       .line1{
+            margin-top: 100px;
+            color: black;
+       }
+       .sec-4{
+            background: linear-gradient(to right bottom, #212428, #16181c);
+            margin: auto;
+            padding: 40px 30px;
+       }
+       .sec-4 span{
+             margin-top: 20px;
+       }
+       .sec-4:hover{
+        background: linear-gradient(to right bottom, #1f1e1e, black);
+        color: white;
+       }
+       .sec-4 h4{
+        font-size: 30px;
+        font-weight: 600;
+       }
+       .sec-4:hover{
+        background-color: #3c3e41;
+       }
+       .sec-6 h2{
+        text-align: center;
+        font-weight: 700;
+         font-size: 60px;
+       }
+       .sec-6 h4{
+        color: aliceblue;
+        font-size: 30px;
+        font-weight: 700;
+       }
+       .sec-6 p{
+        width: 300px;
+        font-size: 18px;
+       }
+       .link1{
+        color: #7e8fa6;
+        text-decoration: none;
+       }
+       .link1:hover{
+        color: #ff014f;
+        border-bottom: 2px solid #ff014f;
+       }
+       .form{
+        background-color: #121416;
+        margin-left: 10px;
+        padding: 30px;
+        width: 100%;
+        border-radius: 10px;
+       }
+       label{
+        padding: 10px;
+       }
+        .input1{
+            font-size: 30px;
+            color: white;
+            width: 100%;
+            font-weight: 600;
+            padding: 8px;
+            background-color: #16181c;
+            border: 2px solid #191b1e;
+            border-radius: 5px;
+       }
+       input:hover{
+        border: 2px solid #ff014f;
+       }
+       textarea{
+         width: 100%;
+         height: 200px;
+         background-color: #16181c;
+         border: 2px solid #191b1e; 
+         border-radius: 5px;
+         color: white;
+       }
+       textarea:hover{
+        border: 2px solid #ff014f;
+       }
+       .btn3{
+        width: 100%;
+        background: linear-gradient(145deg, #1e2024, #23272b);
+        border: none;
+        border-radius: 5px;
+        color: #7e8fa6;
+        padding: 10px;
+       }
+       .btn1:hover{
+        -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);}
+
+       footer{
+        color: #7e8fa6;
+        text-align: center;
+        padding: 100px;
+       }
+
+       h6{
+    font-size: 20px;
+    font-weight: 700;
+}
+.menu-icon{
+   position:relative;
+   right: 10px;
+   top: 5px;
+   font-size: 30px;
+}
+.head1{
+    display: inline;
+    float: right;
+}
+.icon2{
+    font-size: 16px;
+    margin-left: -50px;
+}
+.head1:hover{
+    color: #ff014f;
+}
+.icon2:hover{
+    color: #ff014f;
+}
+.icon3{
+    margin-left: -100px;
+}
+.sec1 img{
+    margin-top:11px;
+    margin-left: 10px;
+}
+.Skills{
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    color: #6c757d;
+    background-color: #16181c;
+    /* box-shadow: 5px 5px 5px #3b3c3c; */
+    box-shadow: 10px 5px 15px #16181c;
+    border-radius: 10px;
+}
+ .Skills h6:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  color: #ff014f;
+ }
+ .icon1{
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: 3px 2px 5px #3b3c3c;
+ }
+ 
+       @media screen and (max-width: 480px) {
+  .sub-sec{
+   display: block;
+  }
+  .pe{
+    display: inline;
+}
+  .h2{
+  font-size: 35px;
+ }
+  .img01{
+   width: 200px;
+   height: 200px;
+   margin-right: 50px;
+  }
+  .sec1{
+    width: 220px;
+    height: 220px;
+  }
+  .main{
+    display: none;
+  }
+    #typ{
+      margin-top: 20px;
+      font-size: 20px;
+  }
+  .css{
+    margin-right: 30px;
+  }
+
+  b{
+  font-size: 20px;
+  }
+  span{
+     font-size: 14px;
+  }
+.form{
+    margin-left: 0px;
+    margin-top: 20px;
+}
+ .sub-sec1{
+    display: block;
+ }
+ .sec1{
+   position: relative;
+   right: 20px;
+ }
+ .btn2{
+    margin-right: 60px;
+ }
+ .btn1{
+    font-size: 16px;
+    position: relative;
+    right: 20px;
+ }
+ .mybtn{
+    margin-top: 40px;
+    padding: 10px;
+ }
+ .particles1{
+    right: 25%;
+ }
+ .h1{
+  margin-left: 5%;
+  font-size: 25px;
+ }
+ .heading4{
+    font-size: 25px;
+ }
+ .progresbar{
+   position: relative;
+   right: 20px;
+ }
+
+ .img-c{
+    margin-right: 10px;
+ }
+  .head02{
+    font-size: 30px;
+  }
+}
+    </style>
+    <script src="app.js"></script>
+    <script src="particles.js"></script>
+    <script src="particles.json"></script>
+    <script src="progres/jquery.lineProgressbar.js"></script>
+    <script src="progres/LineProgressbar.jquery.json"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-firefly@2/tsparticles.preset.firefly.bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+    <body>
+    <div class="container-fluid">
+    <div class="row hero-sec" >
+
+        <!----------------------col-1 start---------------------------------------->
+
+        <div class="col-sm-3  main"> 
+            <div class="img1 ms-5 mt-5 ps-5">
+                <img  src="image/prachi1.jpg" alt="" width="150px" height="150px" style="border-radius: 50%;">
+            </div>
+            <nav>
+                <ul class="nevg ms-5">
+                    <li><a href="#home"><span class="material-symbols-outlined menu-icon">home</span>HOME</a></li>
+                    <li><a href="#FEATURES"><span class="material-symbols-outlined menu-icon">featured_play_list</span>FEATURES</a></li>
+                    <li><a href="#Portfolio"><span class="material-symbols-outlined menu-icon">contact_page</span>PORTFOLIO</a></li>
+                    <li><a href="#Resume"><span class="material-symbols-outlined menu-icon">demography</span>RESUME</a></li>
+                    <li><a href="#"><span class="material-symbols-outlined menu-icon">group</span>CILENTS</a></li>
+                    <li><a href="#"><span class="material-symbols-outlined menu-icon">shopping_cart</span>PRICING</a></li>
+                    <li><a href="#"><span class="material-symbols-outlined menu-icon">image</span>BLOG</a></li>
+                    <li><a href="#Contact"><span class="material-symbols-outlined menu-icon me-2" style="font-size: 25px;">contact_mail</span>CONTACTS</a></li>
+                </ul>
+            </nav>
+            <div class="div1 rounded-3 mt-5">
+                <img class="ps-3" src="image/icons8-shopping-cart-32.png" alt="" width="55px">
+                <span class="span1 rounded-5 me-3 mt-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Eo_circle_red_white_letter-o.svg/768px-Eo_circle_red_white_letter-o.svg.png?20200417175039" width="20px"></span>
+            </div>
+            <hr class="line mt-4 ms-3">
+            <div class="mt-3">
+                <span class="span2 ms-4 " style="font-size: 18px;">FIND WITH ME</span>
+                <div class="icon ms-5 mt-4">
+                  <div class="icon1 ms-3  rounded-3"><img src="image/icons8-facebook-50.png" alt="" width="20px"></div>
+                  <div class="icon1 ms-3 rounded-3"><img src="image/icons8-twitter-50.png" alt="" width="20px"></div>
+                  <div class="icon1  ms-3 rounded-3"><img src="image/icons8-linkedin-50.png" alt="" width="20px"></div>
+                </div>
+            </div>
+        </div>
+
+          <!----------------------col-1 end---------------------------------------->
+
+        <!-------------------------- col-2------------------ -->
+
+        <div class="col ms-2 bg-dark main1">
+
+            <!------------------------------ sec-1 ------------------------>
+            <div  class="parti" id="home">
+                    <div class="particles1" style="position: relative;" id="particles-js">
+                        <div style="position: absolute; left: 35%;">
+                            <div class="sec1 mt-5 ms-5">
+                                <img class="img01" src="image/prachi1.jpg" alt="" width="270px" height="270px" style="border-radius: 50% ;">
+                            </div>
+                            <div>
+                            <h1 class="mt-4 h1">Hi, I’m Prachi Amode</h1>
+                            <span id="typ"></span><br>
+                            </div>
+                    <div class="mybtn ms-5">
+                        <button class="btn1 ms-4">CONTACT ME</button>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+             <!------------------------------ sec-1 end------------------------>
+
+
+         <!--------------------- sec-2 ----------------------------------->
+
+         <div class="sec2" id="FEATURES"  >
+            <span class="span3">FEATURES</span>
+            <h2 class="mt-3 h2">What I Do</h2>
+            <div class="sub-sec mt-5">
+             <div class="sub-sec1">
+                <div class="icon-menu">
+                    <i class="fa-solid fa-bars i mt-1"></i>
+                </div>
+                 <h5 class="sec2-head">Designer</h5>
+                 <p class="pe">I value simple content structure,clean desgin patterns, and thoughtful interaction</p>
+             </div>
+             <div class="sub-sec1">
+                <div class="icon-menu">
+                    <i class="fa-solid fa-code i mt-1"></i> 
+                </div>
+                 <h5 class="sec2-head">Frontend Developer</h5>
+                 <p class="pe">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
+             </div>
+             <div class="sub-sec1">
+                <div class="icon-menu">
+                    <span class="material-symbols-outlined i" style="font-size: 50px;">
+                        import_contacts
+                        </span>
+                </div>
+                 <h5 class="sec2-head">Mentor</h5>
+                 <p class="pe">I genuinely care about people, and love helping fellow Designes work on their craft</p>
+             </div>
+            </div>
+        </div> 
+       
+
+        <!--------------------------- sec2 - end----------------  -->
+
+           <!------------------------- section-3---------------- -->
+
+           <div class="sec3" id="Portfolio">
+                <span>VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</span>
+                <h3 class="head02">My Portfolio</h3>
+             <div class="row mt-5" style="width: 100%;">
+                <div class="fig col">
+                    <figure>
+                        <img src="image/Screenshot 2023-11-04 at 13-59-32 spotify.png" alt="" width="220px" height="200px">
+                       <figcaption>
+                        <i class="fa-regular fa-heart icon2">150</i>
+                        <h6 class="head1">Spotify-Clone</h6>
+                       </figcaption>
+                    </figure>
+                </div>
+                <div class="fig col">
+                     <figure>
+                        <img src="image/phonepe.png" alt="" width="220px" height="200px">
+                       <figcaption>
+                        <i class="fa-regular fa-heart icon2">170</i>
+                        <h6 class="head1">Phonepe-Clone</h6>
+                       </figcaption>
+                    </figure>
+                </div>
+                <div class="fig col">
+                     <figure>
+                        <img src="image/PhotoFolio.png" alt="" width="220px" height="200px">
+                       <figcaption>
+                        <i class="fa-regular fa-heart icon2">150</i>
+                        <h6 class="head1">Photo-Gallery</h6>
+                       </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="row mt-5" style="width: 100%;">
+                <div class="fig col">
+                    <figure>
+                        <img src="image/netflix.png" alt="" width="220px" height="200px">
+                       <figcaption>
+                        <i class="fa-regular fa-heart icon2">150</i>
+                        <h6 class="head1">Netflix Clone</h6>
+                       </figcaption>
+                    </figure>
+                </div>
+                <div class="fig col">
+                     <figure>
+                        <img src="image/calculater1.png" alt="" width="220px" height="200px">
+                       <figcaption>
+                        <i class="fa-regular fa-heart icon3 icon2">150</i>
+                        <h6 class="head1">Calculater</h6>
+                       </figcaption>
+                    </figure>
+                </div>
+                <div class="fig col">
+                     <figure>
+                        <img src="image/Screenshot1.png" alt="" width="220px" height="200px">
+                       <figcaption>
+                        <i class="fa-regular fa-heart icon3 icon2">190</i>
+                        <h6 class="head1">Weather</h6>
+                       </figcaption>
+                    </figure>
+                </div>
+             </div>
+           </div>
+           <hr class="line1">
+
+               <!------------------------- section-3 end ---------------- -->
+
+             <!------------------------------- section - 4 ------------------------------>
+             <div class="sec4 mt-5" id="Resume">
+                <h2 class="h2"style="text-align: center;">My Resume</h2>
+
+                <div class="w3-bar row ms-5 mt-5">
+                    <button class="btn2 col" style="color: #ff014f;" onclick="openCity('London')">Education</button>
+                    <button class=" btn2 col" onclick="openCity('Paris')">Professional Skills</button>
+                  </div>
+                  
+                    <div id="London" class="city" style="color: #7e8fa6;">
+                        <h4 class="heading4 mt-5 ms-5">Education Qualification</h4>
+                        <div class="row mt-5" >
+                            <div class="col-sm-5 sec-4 section-4">
+                                <h4>B.tech in Computer Science</h4>
+                                <p class="mt-3" style="font-size: 20px;">University of RGPV</p>
+                                <p class="ms-2"  style="font-size: 18px; margin-top: 16px;">(2023 - Present)</p>
+                               
+                            </div>
+                            <div class="col-sm-5 ms-2 sec-4 section-4">
+                                <h4>Diploma in Computer Science</h4>
+                                <p class="mt-3" style="font-size: 20px;">University of RGPV</p>
+                                <p  class="ms-2" style="font-size: 18px; margin-top: 16px;">(2019 - 2022)</p>
+                
+                            </div>
+                        </div>
+                      </div>
+                      <div id="Paris" class="w3-container city mt-5 ms-5 ps-5 progresbar" style="display:none">
+                        <h6 class="text-white" style="display: inline;">HTML</h6>
+                        <h6 class="text-white css" style="display: inline; margin-left: 68%;">80%</h6>
+                        <div id="jq" class="mt-4 rounded-5"></div>
+                        <h6 class="text-white" style="display: inline;">CSS</h6>
+                        <h6 class="text-white css" style="display: inline; margin-left: 70%;">80%</h6>
+                        <div id="jq1" class="mt-4 rounded-5"></div>
+                        <h6 class="text-white" style="display: inline;">BOOTSTRAP</h6>
+                        <h6 class="text-white" style="display: inline; margin-left: 62%;">70%</h6>
+                        <div id="jq2" class="mt-4 rounded"></div>
+                        <h6 class="text-white" style="display: inline;">JAVASCRIPT</h6>
+                        <h6 class="text-white" style="display: inline; margin-left: 62%;">40%</h6>
+                        <div id="jq3" class="mt-4 rounded"></div>
+                      </div>
+                </div>
+
+                 <!------------------------------- section - 4 ------------------------------>
+
+                <!---------------------- section - 5 -------------->
+                  <div class="mt-5 ">
+                    <h2 class="mt-5 mb-5 h2" style="text-align: center;">Technical Skills</h2>
+                      
+                            <div class="Skills"><h6>C , C++</h6></div>
+                            <div class="Skills mt-4"><h6>HTML To React</h6></div>
+                            <div class="Skills mt-4"><h6>JAVASCRIPT</h6></div>
+                            <div class="Skills mt-4"><h6>Wordpress</h6></div>
+                       
+                  </div>
+                   <!---------------------- section -5 end-------------->
+
+                 <!-- -------------sec - 6 ----------------->
+                 <div id="Contact" class="sec-6 mt-5  pt-5" style="color: #6c757d;">
+                    <span style="display:block; text-align: center; color: #ff014f;font: size 18px;">CONTACT</span>
+                    <h3 class="head02">Contact With Me</h3>
+                    <div class="mt-5 row myform">
+                        <div class="col-sm-4"style="background-color: #121416; border-radius: 5px;">
+                            <img class="rounded-3 img-c" src="image/contact1.png" alt="" width="350px" style="margin: 10px;">
+                           
+                            <p class="ps-4 pt-3 pb-3">I am available for freelance work. Connect with me via and call in to my account</p>
+                            <span style="font-size: 18px;" class="ps-4 pt-3">Phone: <a class="link1" href="#">+01234567890</a></span><br>
+                            <span style="font-size: 18px;" class="ps-4 pt-2">Email: <a class="link1" href="#">Prachiamode789@gmail.com</a></span>
+                            <div class="ps-4 pt-3" style="font-size: 18px;">FIND WITH ME</div>
+                            <div class="icon ms-5 mt-5">
+                                <div class="icon1  ms-3 rounded-3"><img src="image/icons8-facebook-50.png" alt="" width="20px"></div>
+                                <div class="icon1   ms-3 rounded-3"><img src="image/icons8-twitter-50.png" alt="" width="20px"></div>
+                                <div class="icon1   ms-3 rounded-3"><img src="image/icons8-linkedin-50.png" alt="" width="20px"></div>
+                            </div>
+                        </div>
+                        <div class="form col" >
+                                   <div class="row">
+                                   <div class="col">
+                                        <label for="">YOUR NAME</label><br>
+                                        <input class="input1 input"type="text" name="name" id=""><br>
+                                   </div>
+                                   <div class="col">
+                                        <label for="" class="lab">PHONE NUMBER</label><br>
+                                        <input class="input1 input" type="text"><br>
+                                   </div>
+                                   </div>
+                                   <label for="">EMAIL</label><br>
+                                   <input class="input1 lab1" type="email"><br>
+                                   <label for="">SUBJECT</label><br>
+                                   <input class="input1 lab1" type="text"><br>
+                                   <label for="">YOUR MESSAGE</label><br>
+                                   <textarea></textarea><br>
+                                   <button class="btn3 mt-4">SEND MESSAGE</button>
+                        </div>
+                    </div>
+                    <hr class="mt-5">
+                 </div>
+                 <!---------------------- section - 6 -------------->
+
+                 <!-- footer -->
+                    <footer>
+                        © 2023. All rights reserved by Prachi Amode
+                    </footer>
+
+                  <!--------------------  footer end------------------ -->
+            </div>
+        </div>
+     </div>
+
+ <script>
+ // ---------------------------------typed js--------------------------
+
+ var typed = new Typed('#typ', {
+          strings: ['<b>I am a </b> ' , '<b>I am a</b>  Web Developer..','<b>I am a</b> Web Designer...'],
+          typeSpeed: 50,
+          loop: true,
+          loopCount: Infinity
+        });
+         
+ // --------------------------------------tab menu-------------------------
+        function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+ }
+
+ // ------------------------------------progressbas javascript---------------------------------------------
+    $('#jq').LineProgressbar({
+  percentage: 80,
+  ShowProgressCount:true,
+  duration: 4000.,
+ });
+ $('#jq1').LineProgressbar({
+  percentage: 80,
+  ShowProgressCount:true,
+  duration: 4000.,
+ });
+ $('#jq2').LineProgressbar({
+  percentage: 70,
+  ShowProgressCount:true,
+  duration: 4000.,
+ });
+ $('#jq3').LineProgressbar({
+  percentage: 40,
+  ShowProgressCount:true,
+  duration: 4000.,
+ });
+
+ /* -----------------------------------------particlesJS------------------------------------*/
+
+ particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+ 
+</script>
+</body>
+</html>
